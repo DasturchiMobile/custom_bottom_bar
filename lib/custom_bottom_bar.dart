@@ -16,31 +16,29 @@ class CustomBottomBar extends StatefulWidget {
 class _CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
-      child: SizedBox(
-        height: 80,
-        child: ColoredBox(
-          color: Color(0xFFffffff),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              ...widget.items.sublist(0, (widget.items.length / 2).round()).map(
-                    (e) => BottomBarItemWidget(
-                      imagePath: e.imagePath,
-                      title: e.title,
-                      textStyle: e.textStyle,
-                    ),
+    return SizedBox(
+      height: 80,
+      child: ColoredBox(
+        color: Color(0xFFffffff),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ...widget.items.sublist(0, (widget.items.length / 2).round()).map(
+                  (e) => BottomBarItemWidget(
+                    imagePath: e.imagePath,
+                    title: e.title,
+                    textStyle: e.textStyle,
                   ),
-              IconButton.outlined(onPressed: (){}, icon: Icon(Icons.add_box_sharp)),
-              ...widget.items.sublist((widget.items.length / 2).round(), widget.items.length).map(
-                    (e) => BottomBarItemWidget(
-                  imagePath: e.imagePath,
-                  title: e.title,
-                  textStyle: e.textStyle,
                 ),
+            IconButton.outlined(onPressed: (){}, icon: Icon(Icons.add_box_sharp)),
+            ...widget.items.sublist((widget.items.length / 2).round(), widget.items.length).map(
+                  (e) => BottomBarItemWidget(
+                imagePath: e.imagePath,
+                title: e.title,
+                textStyle: e.textStyle,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
