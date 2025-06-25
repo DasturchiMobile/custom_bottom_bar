@@ -1,7 +1,7 @@
 name: custom_bottom_bar
 description: "custom_bottom_bar"
 version: 1.0.0
-homepage: https://mobildasturchi.uz
+repository: https://github.com/DasturchiMobile/custom_bottom_bar
 
 environment:
   sdk: ^3.6.0
