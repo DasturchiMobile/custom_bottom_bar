@@ -20,7 +20,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
       child: SizedBox(
         height: 80,
         child: ColoredBox(
-          color: Color(0xFF000000),
+          color: Color(0xFFffffff),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
