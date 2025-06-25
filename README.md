@@ -14,3 +14,4 @@ dependencies:
     path: ./custom_bottom_bar
 
 Eslatma: path maydonini sizning loyiha papkangizdagi real yo‘lga moslang.
+```

@@ -22,6 +22,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
         child: ColoredBox(
           color: Color(0xFF000000),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ...widget.items.sublist(0, (widget.items.length / 2).round()).map(
                     (e) => BottomBarItemWidget(

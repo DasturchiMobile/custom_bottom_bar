@@ -16,7 +16,12 @@ class BottomBarItemWidget extends StatelessWidget {
         Image.asset(
             imagePath,
             errorBuilder: (context, _, __){
-              return SvgPicture.asset(imagePath);
+              return SvgPicture.asset(
+                  imagePath,
+                  errorBuilder: (context, _, __){
+                    return Icon(Icons.question_mark);
+                  },
+              );
             },
         ),
         SizedBox(height: 4),
